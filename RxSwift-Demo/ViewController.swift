@@ -95,26 +95,32 @@ class ViewController: UIViewController {
         
         
         /// 订阅的 另一种写法
-        let aaa = PublishSubject<Int>()
-        
-        let bag = DisposeBag()
-        
-        aaa.subscribe { (s) in
-            print("-------------\(s)")
-        }
-        
-        let  reseSubject  = Observable<Int>.create { (observer) -> Disposable in
-            
-            observer.onNext(1)
-            observer.onNext(2)
-            observer.onNext(3)
-            observer.onCompleted()
-            
-            return Disposables.create()
-        }
-        
-        reseSubject.subscribe(aaa).disposed(by: bag)
+//        let aaa = PublishSubject<Int>()
+//
+//        let bag = DisposeBag()
+//
+//        aaa.subscribe { (s) in
+//            print("-------------\(s)")
+//        }
+//
+//        let  reseSubject  = Observable<Int>.create { (observer) -> Disposable in
+//
+//            observer.onNext(1)
+//            observer.onNext(2)
+//            observer.onNext(3)
+//            observer.onCompleted()
+//
+//            return Disposables.create()
+//        }
+//
+//        reseSubject.subscribe(aaa).disposed(by: bag)
 
+        ///事件绑定
+        
+        
+        
+        
+        
     }
 
 }
